@@ -10,4 +10,6 @@ import UIKit
 
 class PlanetCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
 }

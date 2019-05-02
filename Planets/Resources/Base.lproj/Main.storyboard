@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXm-3q-qKb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cep-YN-4CK">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,6 +53,10 @@
                                     <constraint firstItem="PmA-3W-H6s" firstAttribute="top" secondItem="Y8N-2i-hOK" secondAttribute="bottom" constant="-1" id="rwp-ah-OE2"/>
                                     <constraint firstItem="PmA-3W-H6s" firstAttribute="trailing" secondItem="Y8N-2i-hOK" secondAttribute="trailing" id="vdz-PJ-dcx"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="Y8N-2i-hOK" id="Gdt-6s-dRB"/>
+                                    <outlet property="textLabel" destination="PmA-3W-H6s" id="kHg-GB-mUX"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -59,8 +64,89 @@
                             <outlet property="delegate" destination="VXm-3q-qKb" id="D8P-Ex-PJD"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="pcd-vn-NFl">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="3Yi-2r-y0U">
+                            <connections>
+                                <segue destination="LVU-bf-P8s" kind="presentation" identifier="ShowSettings" id="af8-2O-PLi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eey-yK-686" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="139.95535714285714"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="H8y-3L-xV7">
+            <objects>
+                <viewController id="LVU-bf-P8s" customClass="SettingsViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lDv-2h-psa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRZ-Yw-DmI">
+                                <rect key="frame" x="353" y="44" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="LVU-bf-P8s" eventType="touchUpInside" id="gUe-1I-OhD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QFj-qm-3HG">
+                                <rect key="frame" x="24" y="214" width="366" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should Pluto be a planet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krv-qg-Btk">
+                                        <rect key="frame" x="0.0" y="0.0" width="287" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1BT-hG-Iy3">
+                                        <rect key="frame" x="317" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="shouldShowPlutoToggle:" destination="LVU-bf-P8s" eventType="valueChanged" id="lW4-l6-Me1"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QFj-qm-3HG" firstAttribute="leading" secondItem="kZc-eN-0iF" secondAttribute="leading" constant="24" id="MX3-au-bMd"/>
+                            <constraint firstItem="kZc-eN-0iF" firstAttribute="trailing" secondItem="NRZ-Yw-DmI" secondAttribute="trailing" constant="24" id="PGh-6b-zWN"/>
+                            <constraint firstItem="kZc-eN-0iF" firstAttribute="trailing" secondItem="QFj-qm-3HG" secondAttribute="trailing" constant="24" id="nrB-7Z-SKB"/>
+                            <constraint firstItem="NRZ-Yw-DmI" firstAttribute="top" secondItem="kZc-eN-0iF" secondAttribute="top" id="pue-50-bG3"/>
+                            <constraint firstItem="QFj-qm-3HG" firstAttribute="top" secondItem="kZc-eN-0iF" secondAttribute="top" constant="170" id="uYd-5x-GDD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kZc-eN-0iF"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="V4U-vD-1DX"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="9bq-4J-1CF"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="showPlutoSwitch" destination="1BT-hG-Iy3" id="TTZ-RQ-IkB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcA-Uj-2bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="140"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FnA-BA-dDq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cep-YN-4CK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wXV-xh-Xxh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VXm-3q-qKb" kind="relationship" relationship="rootViewController" id="c5G-VX-SYT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTO-kA-5de" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="139.95535714285714"/>
         </scene>

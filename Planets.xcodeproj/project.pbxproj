@@ -15,6 +15,7 @@
 		9DDBBD1F211360F500A55978 /* PlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDBBD1E211360F500A55978 /* PlanetController.swift */; };
 		ECCD17B6227B5B84003E6F37 /* PlanetsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD17B5227B5B84003E6F37 /* PlanetsCollectionViewController.swift */; };
 		ECCD17B8227B5BB3003E6F37 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD17B7227B5BB3003E6F37 /* PlanetCollectionViewCell.swift */; };
+		ECCD17BA227B64DF003E6F37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD17B9227B64DF003E6F37 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9DDBBD1E211360F500A55978 /* PlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetController.swift; sourceTree = "<group>"; };
 		ECCD17B5227B5B84003E6F37 /* PlanetsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCollectionViewController.swift; sourceTree = "<group>"; };
 		ECCD17B7227B5BB3003E6F37 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECCD17B9227B64DF003E6F37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9DDBBD1A211360D500A55978 /* Model */,
 				9DDBBD1C211360E000A55978 /* Model Controller */,
 				9DDBBD1B211360DA00A55978 /* Resources */,
+				ECCD17B9227B64DF003E6F37 /* SettingsViewController.swift */,
 			);
 			path = Planets;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				ECCD17B8227B5BB3003E6F37 /* PlanetCollectionViewCell.swift in Sources */,
 				ECCD17B6227B5B84003E6F37 /* PlanetsCollectionViewController.swift in Sources */,
 				9DDBBD19211360D100A55978 /* Planet.swift in Sources */,
+				ECCD17BA227B64DF003E6F37 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
